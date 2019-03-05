@@ -2,6 +2,8 @@ package com.sf.unical.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -19,10 +21,22 @@ public class ShippingContinent implements Serializable {
 	private Set<Organization> organizations;
 	private Set<RequestHistory> requestHistories;
 	private Set<ShippingOption> shippingOptions;
+	private Set<Country> countries = new HashSet<Country>(0);
+
 
 	public ShippingContinent() {
 	}
-
+	
+	public ShippingContinent(Long id, String name, Set<Organization> organizations,
+			Set<RequestHistory> requestHistories, Set<ShippingOption> shippingOptions, Set<Country> countries) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.organizations = organizations;
+		this.requestHistories = requestHistories;
+		this.shippingOptions = shippingOptions;
+		this.countries = countries;
+	}
 
 	@Id
 	@SequenceGenerator(name="SHIPPING_CONTINENT_ID_GENERATOR", sequenceName="HIBERNATE_SEQUENCE")
@@ -121,4 +135,29 @@ public class ShippingContinent implements Serializable {
 		return shippingOption;
 	}
 
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "shippingContinent")
+	public Set<Country> getCountries() {
+		return countries;
+	}
+
+
+
+	public void setCountries(Set<Country> countries) {
+		this.countries = countries;
+	}
+
+	public Country addCountry(Country country) {
+		getCountries().add(country);
+		country.setShippingContinent(this);
+
+		return country;
+	}
+
+	public Country removeCountry(Country country) {
+		getCountries().remove(country);
+		country.setShippingContinent(null);
+
+		return country;
+	}
 }

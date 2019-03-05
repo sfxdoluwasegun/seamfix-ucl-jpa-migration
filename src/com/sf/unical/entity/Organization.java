@@ -23,9 +23,18 @@ public class Organization implements Serializable {
 	private String officer;
 	private String phone;
 	private String zip;
+	private String verificationRequestStatus;
+	
 	private Country country;
 	private ShippingContinent shippingContinent;
+	
 	private Set<VerificationHistory> verificationHistories;
+	
+	private Boolean alternativeVerificationBody;
+	
+	private char[] password;
+
+
 
 	public Organization() {
 	}
@@ -170,6 +179,35 @@ public class Organization implements Serializable {
 		verificationHistory.setOrganization(null);
 
 		return verificationHistory;
+	}
+
+	@Column(length=1024)
+	public String getVerificationRequestStatus() {
+		return verificationRequestStatus;
+	}
+
+
+	public void setVerificationRequestStatus(String verificationRequestStatus) {
+		this.verificationRequestStatus = verificationRequestStatus;
+	}
+
+	@Column(name="organization_password", length=1024)
+	public char[] getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(char[] password) {
+		this.password = password;
+	}
+
+	@Column(name="is_alternateBody")
+	public Boolean getAlternativeVerificationBody() {
+		return alternativeVerificationBody;
+	}
+
+	public void setAlternativeVerificationBody(Boolean alternativeVerificationBody) {
+		this.alternativeVerificationBody = alternativeVerificationBody;
 	}
 
 }
