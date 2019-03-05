@@ -30,6 +30,7 @@ public class RequestHistory implements Serializable {
 	private Boolean shipped;
 	private String track;
 	private String tracker;
+	private CertificateRequest certificateRequest;
 	private Set<Blockage> blockages;
 	private Set<RequestChange> requestChanges;
 	private RequestBatch requestBatch;
@@ -344,6 +345,16 @@ public class RequestHistory implements Serializable {
 		requestMap.setRequestHistory(null);
 
 		return requestMap;
+	}
+
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "requestHistory")
+	public CertificateRequest getCertificateRequest() {
+		return certificateRequest;
+	}
+
+
+	public void setCertificateRequest(CertificateRequest certificateRequest) {
+		this.certificateRequest = certificateRequest;
 	}
 
 }

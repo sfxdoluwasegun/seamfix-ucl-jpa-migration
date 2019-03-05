@@ -2,6 +2,7 @@ package com.sf.unical.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
 import java.util.Set;
 
 
@@ -18,9 +19,21 @@ public class Country implements Serializable {
 	private String code;
 	private String name;
 	private Set<Organization> organizations;
+	private ShippingContinent shippingContinent;
 
 	public Country() {
 	}
+
+	public Country(Long id, String code, String name, Set<Organization> organizations,
+			ShippingContinent shippingContinent) {
+		super();
+		this.id = id;
+		this.code = code;
+		this.name = name;
+		this.organizations = organizations;
+		this.setShippingContinent(shippingContinent);
+	}
+
 
 
 	@Id
@@ -78,6 +91,16 @@ public class Country implements Serializable {
 		organization.setCountry(null);
 
 		return organization;
+	}
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "shippingcontinent")
+	public ShippingContinent getShippingContinent() {
+		return shippingContinent;
+	}
+
+	public void setShippingContinent(ShippingContinent shippingContinent) {
+		this.shippingContinent = shippingContinent;
 	}
 
 }

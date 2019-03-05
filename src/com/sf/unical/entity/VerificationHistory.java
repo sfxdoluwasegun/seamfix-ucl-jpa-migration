@@ -26,6 +26,7 @@ public class VerificationHistory implements Serializable {
 	private String middleName;
 	private String mode;
 	private String passcode;
+	private String certificateRegNo;
 	private Timestamp payDate;
 	private String phone;
 	private String referenceNo;
@@ -43,6 +44,7 @@ public class VerificationHistory implements Serializable {
 	private Organization organization;
 	private VerificationBatch verificationBatch;
 	private Set<VerificationTag> verificationTags;
+	private String verificationRequestMode;
 
 	public VerificationHistory() {
 	}
@@ -379,6 +381,26 @@ public class VerificationHistory implements Serializable {
 		verificationTag.setVerificationHistory(null);
 
 		return verificationTag;
+	}
+
+	@Column(name = "certificate_id", length = 1024)
+	public String getCertificateRegNo() {
+		return certificateRegNo;
+	}
+
+
+	public void setCertificateRegNo(String certificateRegNo) {
+		this.certificateRegNo = certificateRegNo;
+	}
+
+	@Column(name="verification_request_mode")
+	public String getVerificationRequestMode() {
+		return verificationRequestMode;
+	}
+
+
+	public void setVerificationRequestMode(String verificationRequestMode) {
+		this.verificationRequestMode = verificationRequestMode;
 	}
 
 }
