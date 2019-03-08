@@ -19,6 +19,7 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
   version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
    <persistence-unit name="unicalserver-jpa" transaction-type="RESOURCE_LOCAL">
+   		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
    		<non-jta-data-source>java:/comp/env/jdbc/UnicalServer</non-jta-data-source>
    		<class>com.sf.unical.entity.Admin</class>
    		<class>com.sf.unical.entity.AdminType</class>
