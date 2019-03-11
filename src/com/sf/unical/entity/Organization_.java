@@ -23,4 +23,5 @@ public class Organization_ {
 	public static volatile SingularAttribute<Organization, char[]> password;
 	public static volatile SingularAttribute<Organization, String> verificationRequestStatus;
 	public static volatile SingularAttribute<Organization, Boolean> alternativeVerificationBody;
+	public static volatile SingularAttribute<Organization, Boolean> lastPasswordResetCode;
 }
