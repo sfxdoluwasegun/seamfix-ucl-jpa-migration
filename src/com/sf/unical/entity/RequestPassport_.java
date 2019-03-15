@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SetAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2019-03-05T11:40:40.113+0100")
+@Generated(value="Dali", date="2019-03-15T00:06:46.088+0100")
 @StaticMetamodel(RequestPassport.class)
 public class RequestPassport_ {
 	public static volatile SingularAttribute<RequestPassport, Long> id;
@@ -30,4 +30,5 @@ public class RequestPassport_ {
 	public static volatile SetAttribute<RequestPassport, RequestChange> requestChanges;
 	public static volatile SetAttribute<RequestPassport, RequestHistory> requestHistories;
 	public static volatile SingularAttribute<RequestPassport, Alumni> alumni;
+	public static volatile SingularAttribute<RequestPassport, Boolean> clearanceStatus;
 }
