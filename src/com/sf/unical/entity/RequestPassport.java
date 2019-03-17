@@ -36,6 +36,7 @@ public class RequestPassport implements Serializable {
 	private Set<RequestChange> requestChanges;
 	private Set<RequestHistory> requestHistories;
 	private Alumni alumni;
+	private Boolean clearanceStatus;
 
 	public RequestPassport() {
 	}
@@ -308,6 +309,16 @@ public class RequestPassport implements Serializable {
 
 	public void setAlumni(Alumni alumni) {
 		this.alumni = alumni;
+	}
+
+	@Column()
+	public Boolean getClearanceStatus() {
+		return clearanceStatus;
+	}
+
+
+	public void setClearanceStatus(Boolean clearanceStatus) {
+		this.clearanceStatus = clearanceStatus;
 	}
 
 }
