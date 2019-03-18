@@ -20,4 +20,8 @@ public class Organization_ {
 	public static volatile SingularAttribute<Organization, Country> country;
 	public static volatile SingularAttribute<Organization, ShippingContinent> shippingContinent;
 	public static volatile SetAttribute<Organization, VerificationHistory> verificationHistories;
+	public static volatile SingularAttribute<Organization, char[]> password;
+	public static volatile SingularAttribute<Organization, String> verificationRequestStatus;
+	public static volatile SingularAttribute<Organization, Boolean> alternativeVerificationBody;
+	public static volatile SingularAttribute<Organization, Boolean> lastPasswordResetCode;
 }

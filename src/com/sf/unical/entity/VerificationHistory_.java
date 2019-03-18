@@ -37,4 +37,6 @@ public class VerificationHistory_ {
 	public static volatile SingularAttribute<VerificationHistory, Organization> organization;
 	public static volatile SingularAttribute<VerificationHistory, VerificationBatch> verificationBatch;
 	public static volatile SetAttribute<VerificationHistory, VerificationTag> verificationTags;
+	public static volatile SingularAttribute<VerificationHistory, String> certificateRegNo;
+	public static volatile SingularAttribute<VerificationHistory, String> verificationRequestMode;
 }

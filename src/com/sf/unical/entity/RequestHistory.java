@@ -40,6 +40,7 @@ public class RequestHistory implements Serializable {
 	private ShippingMode shippingMode;
 	private Set<RequestLog> requestLogs;
 	private Set<RequestMap> requestMaps;
+	private String emailAddress;
 
 	public RequestHistory() {
 	}
@@ -355,6 +356,16 @@ public class RequestHistory implements Serializable {
 
 	public void setCertificateRequest(CertificateRequest certificateRequest) {
 		this.certificateRequest = certificateRequest;
+	}
+
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 }
