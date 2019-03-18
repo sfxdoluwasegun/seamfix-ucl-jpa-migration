@@ -33,5 +33,6 @@ public class RequestHistory_ {
 	public static volatile SetAttribute<RequestHistory, RequestLog> requestLogs;
 	public static volatile SetAttribute<RequestHistory, RequestMap> requestMaps;
 	public static volatile SingularAttribute<RequestHistory, CertificateRequest> certificateRequest;
+	public static volatile SingularAttribute<RequestHistory, String> emailAddress;
 	public static volatile SingularAttribute<RequestHistory, Double> bill;
 }

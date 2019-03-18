@@ -33,6 +33,7 @@ public class Organization implements Serializable {
 	private Boolean alternativeVerificationBody;
 	
 	private char[] password;
+	private Boolean lastPasswordResetCode;
 
 
 
@@ -208,6 +209,16 @@ public class Organization implements Serializable {
 
 	public void setAlternativeVerificationBody(Boolean alternativeVerificationBody) {
 		this.alternativeVerificationBody = alternativeVerificationBody;
+	}
+
+
+	public Boolean getLastPasswordResetCode() {
+		return lastPasswordResetCode;
+	}
+
+
+	public void setLastPasswordResetCode(Boolean lastPasswordResetCode) {
+		this.lastPasswordResetCode = lastPasswordResetCode;
 	}
 
 }
