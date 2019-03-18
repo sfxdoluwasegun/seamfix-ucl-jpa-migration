@@ -52,7 +52,7 @@ public class CertificateRequest implements Serializable {
 		return graduationDate;
 	}
 
-	public void setGraduatingYear(String graduationDate) {
+	public void setGraduationDate(String graduationDate) {
 		this.graduationDate = graduationDate;
 	}
 	@Column(name = "degree")
