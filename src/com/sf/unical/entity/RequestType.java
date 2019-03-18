@@ -18,6 +18,8 @@ public class RequestType implements Serializable {
 	private String name;
 	private Set<FeeCategory> feeCategories;
 	private Set<RequestHistory> requestHistories;
+	
+	private Boolean isDefault;
 
 	public RequestType() {
 	}
@@ -93,6 +95,16 @@ public class RequestType implements Serializable {
 		requestHistory.setRequestType(null);
 
 		return requestHistory;
+	}
+
+	@Column(nullable=true)
+	public Boolean getIsDefault() {
+		return isDefault;
+	}
+
+
+	public void setIsDefault(Boolean isDefault) {
+		this.isDefault = isDefault;
 	}
 
 }
