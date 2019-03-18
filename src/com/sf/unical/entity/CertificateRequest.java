@@ -17,7 +17,7 @@ public class CertificateRequest implements Serializable {
 	private RequestHistory requestHistory;
 	
 	private String degreeClass;
-	private String graduatingYear;
+	private String graduationDate;
 
 
 	public CertificateRequest() {
@@ -47,13 +47,13 @@ public class CertificateRequest implements Serializable {
 		this.requestHistory = requestHistory;
 	}
 	
-	@Column(name = "graduating_year", nullable = true)
-	public String getGraduatingYear() {
-		return graduatingYear;
+	@Column(name = "graduation_date", nullable = true)
+	public String getGraduationDate() {
+		return graduationDate;
 	}
 
-	public void setGraduatingYear(String graduatingYear) {
-		this.graduatingYear = graduatingYear;
+	public void setGraduatingYear(String graduationDate) {
+		this.graduationDate = graduationDate;
 	}
 	@Column(name = "degree")
 	public String getDegreeClass() {
