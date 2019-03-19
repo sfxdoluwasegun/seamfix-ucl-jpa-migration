@@ -30,7 +30,7 @@ public class VerificationHistory implements Serializable {
 	private Timestamp payDate;
 	private String phone;
 	private String referenceNo;
-	private Boolean referred;
+	private boolean referred;
 	private String responseCode;
 	private String sessionId;
 	private String surname;
@@ -194,11 +194,11 @@ public class VerificationHistory implements Serializable {
 
 
 	@Column(nullable=false)
-	public Boolean getReferred() {
+	public boolean getReferred() {
 		return this.referred;
 	}
 
-	public void setReferred(Boolean referred) {
+	public void setReferred(boolean referred) {
 		this.referred = referred;
 	}
 
