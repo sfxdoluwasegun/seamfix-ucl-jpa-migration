@@ -16,16 +16,16 @@ import java.util.Set;
 public class VerificationTag implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Long id;
-	private Boolean authentic;
+	private boolean authentic;
 	private String comment;
-	private Boolean completed;
+	private boolean completed;
 	private Timestamp date;
 	private String degree;
 	private String department;
 	private Timestamp dispatched;
 	private String fullname;
 	private String graduation;
-	private Boolean posted;
+	private boolean posted;
 	private String sex;
 	private String type;
 	private Set<SignedDocument> signedDocuments;
@@ -50,11 +50,11 @@ public class VerificationTag implements Serializable {
 
 
 	@Column(nullable=false)
-	public Boolean getAuthentic() {
+	public boolean getAuthentic() {
 		return this.authentic;
 	}
 
-	public void setAuthentic(Boolean authentic) {
+	public void setAuthentic(boolean authentic) {
 		this.authentic = authentic;
 	}
 
@@ -70,11 +70,11 @@ public class VerificationTag implements Serializable {
 
 
 	@Column(nullable=false)
-	public Boolean getCompleted() {
+	public boolean getCompleted() {
 		return this.completed;
 	}
 
-	public void setCompleted(Boolean completed) {
+	public void setCompleted(boolean completed) {
 		this.completed = completed;
 	}
 
@@ -139,11 +139,11 @@ public class VerificationTag implements Serializable {
 
 
 	@Column(nullable=false)
-	public Boolean getPosted() {
+	public boolean getPosted() {
 		return this.posted;
 	}
 
-	public void setPosted(Boolean posted) {
+	public void setPosted(boolean posted) {
 		this.posted = posted;
 	}
 
