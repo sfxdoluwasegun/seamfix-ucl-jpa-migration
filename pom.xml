@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sf.unical</groupId>
 	<artifactId>ucl-jpa</artifactId>
-	<version>1.0.0-FINAL</version>
+	<version>1.0.0-SNAPSHOT</version>
 	
 	<name>Unical JPA Project</name>
 	<description>JPA/ORM project from Unical Portal/Service</description>
