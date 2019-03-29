@@ -3,6 +3,7 @@ package com.sf.unical.entity;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -30,7 +31,7 @@ public class VerificationHistory implements Serializable {
 	private Timestamp payDate;
 	private String phone;
 	private String referenceNo;
-	private Boolean referred;
+	private boolean referred;
 	private String responseCode;
 	private String sessionId;
 	private String surname;
@@ -194,11 +195,11 @@ public class VerificationHistory implements Serializable {
 
 
 	@Column(nullable=false)
-	public Boolean getReferred() {
+	public boolean getReferred() {
 		return this.referred;
 	}
 
-	public void setReferred(Boolean referred) {
+	public void setReferred(boolean referred) {
 		this.referred = referred;
 	}
 
@@ -274,7 +275,7 @@ public class VerificationHistory implements Serializable {
 
 
 	//bi-directional many-to-one association to Attachment
-	@OneToMany(mappedBy="verificationHistory")
+	@OneToMany(mappedBy="verificationHistory", cascade=CascadeType.ALL)
 	public Set<Attachment> getAttachments() {
 		return this.attachments;
 	}
@@ -283,11 +284,13 @@ public class VerificationHistory implements Serializable {
 		this.attachments = attachments;
 	}
 
-	public Attachment addAttachment(Attachment attachment) {
-		getAttachments().add(attachment);
+	public void addAttachment(Attachment attachment) {
+		
+		if (this.attachments == null)
+			this.attachments = new HashSet<>();
+		
 		attachment.setVerificationHistory(this);
-
-		return attachment;
+		this.attachments.add(attachment);
 	}
 
 	public Attachment removeAttachment(Attachment attachment) {

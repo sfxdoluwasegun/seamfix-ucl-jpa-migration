@@ -3,6 +3,7 @@ package com.sf.unical.entity;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -172,7 +173,7 @@ public class VerificationBatch implements Serializable {
 
 
 	//bi-directional many-to-one association to VerificationHistory
-	@OneToMany(mappedBy="verificationBatch")
+	@OneToMany(mappedBy="verificationBatch", cascade=CascadeType.ALL)
 	public Set<VerificationHistory> getVerificationHistories() {
 		return this.verificationHistories;
 	}
@@ -181,11 +182,12 @@ public class VerificationBatch implements Serializable {
 		this.verificationHistories = verificationHistories;
 	}
 
-	public VerificationHistory addVerificationHistory(VerificationHistory verificationHistory) {
-		getVerificationHistories().add(verificationHistory);
+	public void addVerificationHistory(VerificationHistory verificationHistory) {
+		
+		if (this.verificationHistories == null)
+			this.verificationHistories = new HashSet<>();
 		verificationHistory.setVerificationBatch(this);
-
-		return verificationHistory;
+		this.verificationHistories.add(verificationHistory);
 	}
 
 	public VerificationHistory removeVerificationHistory(VerificationHistory verificationHistory) {
