@@ -15,15 +15,15 @@ import java.util.Set;
 public class Result implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Long id;
-	private double cgpa;
+	private Double cgpa;
 	private String degree;
 	private String degreeClass;
 	private String distinctions;
-	private double fgpa;
-	private double firstArchiveCgpa;
-	private double secondArchiveCgpa;
-	private double totalUnitsOfferred;
-	private double wgpa;
+	private Double fgpa;
+	private Double firstArchiveCgpa;
+	private Double secondArchiveCgpa;
+	private Double totalUnitsOfferred;
+	private Double wgpa;
 	private Set<Alumni> alumnis;
 
 	public Result() {
@@ -43,11 +43,11 @@ public class Result implements Serializable {
 	}
 
 
-	public double getCgpa() {
+	public Double getCgpa() {
 		return this.cgpa;
 	}
 
-	public void setCgpa(double cgpa) {
+	public void setCgpa(Double cgpa) {
 		this.cgpa = cgpa;
 	}
 
@@ -82,50 +82,50 @@ public class Result implements Serializable {
 	}
 
 
-	public double getFgpa() {
+	public Double getFgpa() {
 		return this.fgpa;
 	}
 
-	public void setFgpa(double fgpa) {
+	public void setFgpa(Double fgpa) {
 		this.fgpa = fgpa;
 	}
 
 
 	@Column(name="first_archive_cgpa")
-	public double getFirstArchiveCgpa() {
+	public Double getFirstArchiveCgpa() {
 		return this.firstArchiveCgpa;
 	}
 
-	public void setFirstArchiveCgpa(double firstArchiveCgpa) {
+	public void setFirstArchiveCgpa(Double firstArchiveCgpa) {
 		this.firstArchiveCgpa = firstArchiveCgpa;
 	}
 
 
 	@Column(name="second_archive_cgpa")
-	public double getSecondArchiveCgpa() {
+	public Double getSecondArchiveCgpa() {
 		return this.secondArchiveCgpa;
 	}
 
-	public void setSecondArchiveCgpa(double secondArchiveCgpa) {
+	public void setSecondArchiveCgpa(Double secondArchiveCgpa) {
 		this.secondArchiveCgpa = secondArchiveCgpa;
 	}
 
 
 	@Column(name="total_units_offerred")
-	public double getTotalUnitsOfferred() {
+	public Double getTotalUnitsOfferred() {
 		return this.totalUnitsOfferred;
 	}
 
-	public void setTotalUnitsOfferred(double totalUnitsOfferred) {
+	public void setTotalUnitsOfferred(Double totalUnitsOfferred) {
 		this.totalUnitsOfferred = totalUnitsOfferred;
 	}
 
 
-	public double getWgpa() {
+	public Double getWgpa() {
 		return this.wgpa;
 	}
 
-	public void setWgpa(double wgpa) {
+	public void setWgpa(Double wgpa) {
 		this.wgpa = wgpa;
 	}
 
