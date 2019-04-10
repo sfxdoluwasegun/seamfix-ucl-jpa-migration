@@ -17,7 +17,7 @@ public class RequestLog implements Serializable {
 	private Long id;
 	private Timestamp date;
 	private String description;
-	private Boolean shipped;
+	private boolean shipped;
 	private String status;
 	private RequestHistory requestHistory;
 
@@ -59,11 +59,11 @@ public class RequestLog implements Serializable {
 
 
 	@Column(nullable=false)
-	public Boolean getShipped() {
+	public boolean getShipped() {
 		return this.shipped;
 	}
 
-	public void setShipped(Boolean shipped) {
+	public void setShipped(boolean shipped) {
 		this.shipped = shipped;
 	}
 
