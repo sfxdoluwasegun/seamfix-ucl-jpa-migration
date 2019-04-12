@@ -35,4 +35,5 @@ public class RequestHistory_ {
 	public static volatile SingularAttribute<RequestHistory, CertificateRequest> certificateRequest;
 	public static volatile SingularAttribute<RequestHistory, String> emailAddress;
 	public static volatile SingularAttribute<RequestHistory, Double> bill;
+	public static volatile SingularAttribute<RequestHistory, ProficiencyRequest> proficiencyRequest;
 }
