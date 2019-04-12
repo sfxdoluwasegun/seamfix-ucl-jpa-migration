@@ -2,6 +2,7 @@ package com.sf.unical.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
 import java.util.Date;
 import java.sql.Timestamp;
 import java.util.Set;
@@ -41,6 +42,7 @@ public class RequestHistory implements Serializable {
 	private Set<RequestLog> requestLogs;
 	private Set<RequestMap> requestMaps;
 	private String emailAddress;
+	private ProficiencyRequest proficiencyRequest;
 
 	public RequestHistory() {
 	}
@@ -366,6 +368,15 @@ public class RequestHistory implements Serializable {
 
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
+	}
+	
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "requestHistory")
+	public ProficiencyRequest getProficiencyRequest() {
+		return proficiencyRequest;
+	}
+
+	public void setProficiencyRequest(ProficiencyRequest proficiencyRequest) {
+		this.proficiencyRequest = proficiencyRequest;
 	}
 
 }
