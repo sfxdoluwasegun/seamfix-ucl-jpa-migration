@@ -350,7 +350,7 @@ public class RequestHistory implements Serializable {
 		return requestMap;
 	}
 
-	@OneToOne(cascade = CascadeType.ALL, mappedBy = "requestHistory")
+	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "requestHistory")
 	public CertificateRequest getCertificateRequest() {
 		return certificateRequest;
 	}
@@ -370,7 +370,7 @@ public class RequestHistory implements Serializable {
 		this.emailAddress = emailAddress;
 	}
 	
-	@OneToOne(cascade = CascadeType.ALL, mappedBy = "requestHistory")
+	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "requestHistory")
 	public ProficiencyRequest getProficiencyRequest() {
 		return proficiencyRequest;
 	}

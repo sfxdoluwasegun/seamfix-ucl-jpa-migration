@@ -16,4 +16,5 @@ public class SettlementTrail_ {
 	public static volatile SingularAttribute<SettlementTrail, PayHistory> payHistory;
 	public static volatile SingularAttribute<SettlementTrail, VerificationBatch> verificationBatch;
 	public static volatile SingularAttribute<SettlementTrail, VerificationHistory> verificationHistory;
+	public static volatile SingularAttribute<SettlementTrail, Double> proficiencyAmount;
 }
