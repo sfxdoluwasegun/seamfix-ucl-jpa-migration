@@ -30,7 +30,7 @@ public class RequestPassport implements Serializable {
 	private String surname;
 	private String type;
 	private Boolean uploaded;
-	private Boolean verified;
+	private Boolean verified = Boolean.FALSE;
 	private String year;
 	private Set<PayHistory> payHistories;
 	private Set<RequestChange> requestChanges;

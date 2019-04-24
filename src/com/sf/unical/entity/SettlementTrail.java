@@ -22,6 +22,7 @@ public class SettlementTrail implements Serializable {
 	private PayHistory payHistory;
 	private VerificationBatch verificationBatch;
 	private VerificationHistory verificationHistory;
+	private Double proficiencyAmount;
 
 	public SettlementTrail() {
 	}
@@ -125,6 +126,16 @@ public class SettlementTrail implements Serializable {
 
 	public void setVerificationHistory(VerificationHistory verificationHistory) {
 		this.verificationHistory = verificationHistory;
+	}
+
+	@Column(name = "proficiency_amount")
+	public Double getProficiencyAmount() {
+		return proficiencyAmount;
+	}
+
+
+	public void setProficiencyAmount(Double proficiencyAmount) {
+		this.proficiencyAmount = proficiencyAmount;
 	}
 
 }
