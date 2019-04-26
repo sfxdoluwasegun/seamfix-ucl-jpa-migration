@@ -19,7 +19,7 @@ public class RequestHistory implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String address;
-	private double bill;
+	private Double bill;
 	private Integer copies;
 	private Timestamp date;
 	private Boolean manual;
@@ -71,11 +71,11 @@ public class RequestHistory implements Serializable {
 	}
 
 
-	public double getBill() {
+	public Double getBill() {
 		return this.bill;
 	}
 
-	public void setBill(double bill) {
+	public void setBill(Double bill) {
 		this.bill = bill;
 	}
 
