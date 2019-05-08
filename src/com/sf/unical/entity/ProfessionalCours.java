@@ -18,7 +18,7 @@ public class ProfessionalCours implements Serializable {
 	private String evaluation;
 	private String grade;
 	private String name;
-	private double score;
+	private Double score;
 	private String unit;
 	private ProfessionalExam professionalExam;
 
@@ -79,11 +79,11 @@ public class ProfessionalCours implements Serializable {
 	}
 
 
-	public double getScore() {
+	public Double getScore() {
 		return this.score;
 	}
 
-	public void setScore(double score) {
+	public void setScore(Double score) {
 		this.score = score;
 	}
 
