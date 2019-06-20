@@ -7,7 +7,7 @@ import javax.persistence.metamodel.SetAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2019-03-11T21:04:42.608+0100")
+@Generated(value="Dali", date="2019-05-21T10:56:12.368+0100")
 @StaticMetamodel(RequestHistory.class)
 public class RequestHistory_ {
 	public static volatile SingularAttribute<RequestHistory, Long> id;
@@ -33,7 +33,7 @@ public class RequestHistory_ {
 	public static volatile SetAttribute<RequestHistory, RequestLog> requestLogs;
 	public static volatile SetAttribute<RequestHistory, RequestMap> requestMaps;
 	public static volatile SingularAttribute<RequestHistory, CertificateRequest> certificateRequest;
-	public static volatile SingularAttribute<RequestHistory, String> emailAddress;
-	public static volatile SingularAttribute<RequestHistory, Double> bill;
 	public static volatile SingularAttribute<RequestHistory, ProficiencyRequest> proficiencyRequest;
+	public static volatile SingularAttribute<RequestHistory, Double> bill;
+	public static volatile SingularAttribute<RequestHistory, String> emailAddress;
 }
